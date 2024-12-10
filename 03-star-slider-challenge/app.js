@@ -13,3 +13,49 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+
+// grab star icon
+// grab the slider
+// write a function to create new span element with the "★"
+// add event listener that listens for slider value
+// paste star in star div - append as child to "stars" div
+
+/*
+let starIcon = document.getElementsByClassName("star-icon");
+
+let slider = document.getElementById("starSlider");
+
+const starEmoji = document.createElement("span");
+starEmoji.innerText = "★";
+
+let starDiv = document.getElementById("stars");
+
+function changeStars(){
+  for (let i = 1; i < slider.value; i++) {document.getElementById("stars").appendChild(starEmoji);}
+  console.log(slider.value)
+};
+
+slider.addEventListener("input", changeStars);
+*/
+
+//-------------------------------------------------------------------------------------------------------------------
+
+// let starIcon = document.getElementsByClassName("star-icon");  RETURNS COLLECTION OF ELEMENTS
+let starIcon = document.querySelector(".star-icon"); // RETURNS A SINGLE ELEMENT
+
+
+let slider = document.getElementById("starSlider");
+
+let starDiv = document.getElementById("stars");
+
+function changeStars() {
+  starDiv.textContent = ""
+  let numberOfStars = slider.value;
+  for (let i = 0; i < numberOfStars; i++) {
+    starDiv.appendChild(starIcon.cloneNode(true));
+  }
+  console.log(numberOfStars);
+}
+// HELPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+slider.addEventListener("input", changeStars);

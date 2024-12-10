@@ -15,3 +15,22 @@ Hint: You can achieve this in multiple ways e.g. via the opacity or style proper
 */
 
 // Place your plan and solution below!
+
+// grab chris' face
+// create an event listener for a hover
+// create function to make chris "hidden"
+
+const chrisFace = document.getElementsByTagName("img")[0];
+
+function hideChris(){
+  chrisFace.style.visibility = "hidden";
+};
+
+function showChris(){
+  chrisFace.style.visibility = "visible";
+};
+
+
+
+chrisFace.addEventListener("mouseout", showChris);
+chrisFace.addEventListener("mouseover", hideChris);

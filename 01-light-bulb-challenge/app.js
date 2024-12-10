@@ -14,3 +14,24 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+//1
+// Get the turn on button
+const onButton = document.getElementById("turnBulbOn");
+// Get the img element
+const img = document.getElementById("lightbulb");
+// When on button clicked - Change img element
+function switchOn() {
+  img.src = "light-bulb-on.png";
+}
+// Add eventListener
+onButton.addEventListener("click", switchOn);
+
+//2
+// Get the turn off button
+const offButton = document.getElementById("turnBulbOff");
+// When off button clicked - Change img element
+function switchOff() {
+  img.src = "light-bulb-off.png";
+}
+//Add eventListener
+offButton.addEventListener("click", switchOff);

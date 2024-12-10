@@ -13,3 +13,21 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+// grab the canvas element
+// grab the colorPicker element
+// write function to change canvas to inputted color
+// make an eventlistener for the colorPicker that listens for a input
+
+
+const canvasColor = document.getElementById("canvas");
+
+const selectedColor = document.getElementById("colorPicker");
+
+function changeColor(){
+  canvas.style.backgroundColor = this.value
+}
+
+colorPicker.addEventListener("input", changeColor)
+
+
